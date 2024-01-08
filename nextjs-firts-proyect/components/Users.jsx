@@ -11,10 +11,8 @@ function Users({ users }) {
         <ul>
             {
                 users.map(user => (
-                    <Linkn key={user.id} hfref={`/users/${user.id}`} >
-                        <li className="bg-slate-400 mb-2 p-4 rounded-r-md flex justify-between"
-                            onClick={() => alert(user.id)}
-                        >
+                    <Link key={user.id} href={`/users/${user.id}`} >
+                        <li className="bg-slate-400 mb-2 p-4 rounded-r-md flex justify-between">
 
                             <div>
                                 <h5 className="font-bold">{user.id} . {user.first_name} . {user.last_name}</h5>
@@ -22,7 +20,7 @@ function Users({ users }) {
                             </div>
                             <img src={user.avatar} className="rounded-full w-20" />
                         </li>
-                    </Linkn>
+                    </Link>
                 ))
             }
         </ul>
